@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		967F2E6119AAE0A600E39334 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967F2E6019AAE0A600E39334 /* Foundation.framework */; };
+		967F2E6319AAE0A600E39334 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967F2E6219AAE0A600E39334 /* CoreGraphics.framework */; };
+		967F2E6519AAE0A600E39334 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967F2E6419AAE0A600E39334 /* UIKit.framework */; };
+		967F2E6B19AAE0A600E39334 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 967F2E6919AAE0A600E39334 /* InfoPlist.strings */; };
+		967F2E6D19AAE0A600E39334 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 967F2E6C19AAE0A600E39334 /* main.m */; };
+		967F2E7119AAE0A600E39334 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 967F2E7019AAE0A600E39334 /* AppDelegate.m */; };
+		967F2E7419AAE0A600E39334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967F2E7219AAE0A600E39334 /* Main.storyboard */; };
+		967F2E7719AAE0A600E39334 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967F2E7619AAE0A600E39334 /* ViewController.m */; };
+		967F2E7919AAE0A600E39334 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967F2E7819AAE0A600E39334 /* Images.xcassets */; };
+		967F2E8019AAE0A600E39334 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967F2E7F19AAE0A600E39334 /* XCTest.framework */; };
+		967F2E8119AAE0A600E39334 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967F2E6019AAE0A600E39334 /* Foundation.framework */; };
+		967F2E8219AAE0A600E39334 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967F2E6419AAE0A600E39334 /* UIKit.framework */; };
+		967F2E8A19AAE0A600E39334 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 967F2E8819AAE0A600E39334 /* InfoPlist.strings */; };
+		967F2E8C19AAE0A600E39334 /* WikiFutzerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 967F2E8B19AAE0A600E39334 /* WikiFutzerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		967F2E8319AAE0A600E39334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 967F2E5519AAE0A600E39334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 967F2E5C19AAE0A600E39334;
+			remoteInfo = WikiFutzer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		967F2E5D19AAE0A600E39334 /* WikiFutzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiFutzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		967F2E6019AAE0A600E39334 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		967F2E6219AAE0A600E39334 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		967F2E6419AAE0A600E39334 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		967F2E6819AAE0A600E39334 /* WikiFutzer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WikiFutzer-Info.plist"; sourceTree = "<group>"; };
+		967F2E6A19AAE0A600E39334 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		967F2E6C19AAE0A600E39334 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		967F2E6E19AAE0A600E39334 /* WikiFutzer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WikiFutzer-Prefix.pch"; sourceTree = "<group>"; };
+		967F2E6F19AAE0A600E39334 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		967F2E7019AAE0A600E39334 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		967F2E7319AAE0A600E39334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		967F2E7519AAE0A600E39334 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		967F2E7619AAE0A600E39334 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		967F2E7819AAE0A600E39334 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		967F2E7E19AAE0A600E39334 /* WikiFutzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiFutzerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		967F2E7F19AAE0A600E39334 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		967F2E8719AAE0A600E39334 /* WikiFutzerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WikiFutzerTests-Info.plist"; sourceTree = "<group>"; };
+		967F2E8919AAE0A600E39334 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		967F2E8B19AAE0A600E39334 /* WikiFutzerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WikiFutzerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		967F2E5A19AAE0A600E39334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967F2E6319AAE0A600E39334 /* CoreGraphics.framework in Frameworks */,
+				967F2E6519AAE0A600E39334 /* UIKit.framework in Frameworks */,
+				967F2E6119AAE0A600E39334 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967F2E7B19AAE0A600E39334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967F2E8019AAE0A600E39334 /* XCTest.framework in Frameworks */,
+				967F2E8219AAE0A600E39334 /* UIKit.framework in Frameworks */,
+				967F2E8119AAE0A600E39334 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		967F2E5419AAE0A600E39334 = {
+			isa = PBXGroup;
+			children = (
+				967F2E6619AAE0A600E39334 /* WikiFutzer */,
+				967F2E8519AAE0A600E39334 /* WikiFutzerTests */,
+				967F2E5F19AAE0A600E39334 /* Frameworks */,
+				967F2E5E19AAE0A600E39334 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		967F2E5E19AAE0A600E39334 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				967F2E5D19AAE0A600E39334 /* WikiFutzer.app */,
+				967F2E7E19AAE0A600E39334 /* WikiFutzerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		967F2E5F19AAE0A600E39334 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				967F2E6019AAE0A600E39334 /* Foundation.framework */,
+				967F2E6219AAE0A600E39334 /* CoreGraphics.framework */,
+				967F2E6419AAE0A600E39334 /* UIKit.framework */,
+				967F2E7F19AAE0A600E39334 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		967F2E6619AAE0A600E39334 /* WikiFutzer */ = {
+			isa = PBXGroup;
+			children = (
+				967F2E6F19AAE0A600E39334 /* AppDelegate.h */,
+				967F2E7019AAE0A600E39334 /* AppDelegate.m */,
+				967F2E7219AAE0A600E39334 /* Main.storyboard */,
+				967F2E7519AAE0A600E39334 /* ViewController.h */,
+				967F2E7619AAE0A600E39334 /* ViewController.m */,
+				967F2E7819AAE0A600E39334 /* Images.xcassets */,
+				967F2E6719AAE0A600E39334 /* Supporting Files */,
+			);
+			path = WikiFutzer;
+			sourceTree = "<group>";
+		};
+		967F2E6719AAE0A600E39334 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				967F2E6819AAE0A600E39334 /* WikiFutzer-Info.plist */,
+				967F2E6919AAE0A600E39334 /* InfoPlist.strings */,
+				967F2E6C19AAE0A600E39334 /* main.m */,
+				967F2E6E19AAE0A600E39334 /* WikiFutzer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		967F2E8519AAE0A600E39334 /* WikiFutzerTests */ = {
+			isa = PBXGroup;
+			children = (
+				967F2E8B19AAE0A600E39334 /* WikiFutzerTests.m */,
+				967F2E8619AAE0A600E39334 /* Supporting Files */,
+			);
+			path = WikiFutzerTests;
+			sourceTree = "<group>";
+		};
+		967F2E8619AAE0A600E39334 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				967F2E8719AAE0A600E39334 /* WikiFutzerTests-Info.plist */,
+				967F2E8819AAE0A600E39334 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		967F2E5C19AAE0A600E39334 /* WikiFutzer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 967F2E8F19AAE0A600E39334 /* Build configuration list for PBXNativeTarget "WikiFutzer" */;
+			buildPhases = (
+				967F2E5919AAE0A600E39334 /* Sources */,
+				967F2E5A19AAE0A600E39334 /* Frameworks */,
+				967F2E5B19AAE0A600E39334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WikiFutzer;
+			productName = WikiFutzer;
+			productReference = 967F2E5D19AAE0A600E39334 /* WikiFutzer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		967F2E7D19AAE0A600E39334 /* WikiFutzerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 967F2E9219AAE0A600E39334 /* Build configuration list for PBXNativeTarget "WikiFutzerTests" */;
+			buildPhases = (
+				967F2E7A19AAE0A600E39334 /* Sources */,
+				967F2E7B19AAE0A600E39334 /* Frameworks */,
+				967F2E7C19AAE0A600E39334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				967F2E8419AAE0A600E39334 /* PBXTargetDependency */,
+			);
+			name = WikiFutzerTests;
+			productName = WikiFutzerTests;
+			productReference = 967F2E7E19AAE0A600E39334 /* WikiFutzerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		967F2E5519AAE0A600E39334 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					967F2E7D19AAE0A600E39334 = {
+						TestTargetID = 967F2E5C19AAE0A600E39334;
+					};
+				};
+			};
+			buildConfigurationList = 967F2E5819AAE0A600E39334 /* Build configuration list for PBXProject "WikiFutzer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 967F2E5419AAE0A600E39334;
+			productRefGroup = 967F2E5E19AAE0A600E39334 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				967F2E5C19AAE0A600E39334 /* WikiFutzer */,
+				967F2E7D19AAE0A600E39334 /* WikiFutzerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		967F2E5B19AAE0A600E39334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967F2E7919AAE0A600E39334 /* Images.xcassets in Resources */,
+				967F2E6B19AAE0A600E39334 /* InfoPlist.strings in Resources */,
+				967F2E7419AAE0A600E39334 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967F2E7C19AAE0A600E39334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967F2E8A19AAE0A600E39334 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		967F2E5919AAE0A600E39334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967F2E7719AAE0A600E39334 /* ViewController.m in Sources */,
+				967F2E7119AAE0A600E39334 /* AppDelegate.m in Sources */,
+				967F2E6D19AAE0A600E39334 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967F2E7A19AAE0A600E39334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967F2E8C19AAE0A600E39334 /* WikiFutzerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		967F2E8419AAE0A600E39334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 967F2E5C19AAE0A600E39334 /* WikiFutzer */;
+			targetProxy = 967F2E8319AAE0A600E39334 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		967F2E6919AAE0A600E39334 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				967F2E6A19AAE0A600E39334 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		967F2E7219AAE0A600E39334 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				967F2E7319AAE0A600E39334 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		967F2E8819AAE0A600E39334 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				967F2E8919AAE0A600E39334 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		967F2E8D19AAE0A600E39334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		967F2E8E19AAE0A600E39334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		967F2E9019AAE0A600E39334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WikiFutzer/WikiFutzer-Prefix.pch";
+				INFOPLIST_FILE = "WikiFutzer/WikiFutzer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		967F2E9119AAE0A600E39334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WikiFutzer/WikiFutzer-Prefix.pch";
+				INFOPLIST_FILE = "WikiFutzer/WikiFutzer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		967F2E9319AAE0A600E39334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WikiFutzer.app/WikiFutzer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WikiFutzer/WikiFutzer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WikiFutzerTests/WikiFutzerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		967F2E9419AAE0A600E39334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WikiFutzer.app/WikiFutzer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WikiFutzer/WikiFutzer-Prefix.pch";
+				INFOPLIST_FILE = "WikiFutzerTests/WikiFutzerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		967F2E5819AAE0A600E39334 /* Build configuration list for PBXProject "WikiFutzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967F2E8D19AAE0A600E39334 /* Debug */,
+				967F2E8E19AAE0A600E39334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		967F2E8F19AAE0A600E39334 /* Build configuration list for PBXNativeTarget "WikiFutzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967F2E9019AAE0A600E39334 /* Debug */,
+				967F2E9119AAE0A600E39334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		967F2E9219AAE0A600E39334 /* Build configuration list for PBXNativeTarget "WikiFutzerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967F2E9319AAE0A600E39334 /* Debug */,
+				967F2E9419AAE0A600E39334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 967F2E5519AAE0A600E39334 /* Project object */;
+}
