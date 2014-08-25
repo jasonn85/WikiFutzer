@@ -26,4 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+
+}
+
 @end
