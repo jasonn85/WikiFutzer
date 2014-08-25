@@ -54,6 +54,8 @@
     tapper = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
     tapper.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapper];
+    
+    [self.tableView.panGestureRecognizer addTarget:self action:@selector(tapped:)];
 }
 
 - (void)didReceiveMemoryWarning
