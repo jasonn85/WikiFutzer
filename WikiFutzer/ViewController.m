@@ -52,6 +52,7 @@
     tableTitles = [[NSMutableArray alloc] init];
     
     tapper = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    tapper.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapper];
 }
 
@@ -180,7 +181,7 @@
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     if (indexPath.row >= [wiki.allWikiPagesEverFetched count])
@@ -195,6 +196,25 @@
     
     return cell;
 }
+
+#pragma mark - Table view delegate
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WikiInterface * wiki = [WikiInterface sharedInterface];
+    
+    if (indexPath.row < [wiki.allWikiPagesEverFetched count])
+    {
+        WikiPage * selectedPage = wiki.allWikiPagesEverFetched[indexPath.row];
+        
+        [self clearResults];
+        primaryTopic = selectedPage.title;
+        self.searchBar.text = primaryTopic;
+        [wiki fetchPageForTopic:primaryTopic];
+        [wiki fetchAllPagesLinkedFromTopic:primaryTopic];
+    }
+}
+
+
 
 
 @end

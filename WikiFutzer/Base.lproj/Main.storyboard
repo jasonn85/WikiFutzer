@@ -30,6 +30,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="Xs6-9Y-02m"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="FMl-lc-Ba7"/>
                                 </connections>
                             </tableView>
                         </subviews>
