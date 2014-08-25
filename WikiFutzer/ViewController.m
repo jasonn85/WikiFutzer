@@ -9,7 +9,15 @@
 #import "ViewController.h"
 #import "WikiInterface.h"
 
+#define kSearchBarDelay     1.0
+
 @interface ViewController ()
+{
+    NSTimer * searchTimer;
+    
+    NSString * primaryTopic;
+    NSMutableArray * tableTitles;
+}
 
 @end
 
@@ -20,7 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [[WikiInterface sharedInterface] fetchPageForTopic:@"Albert Einstein"];
+    tableTitles = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,7 +39,36 @@
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-
+    [searchTimer invalidate];
+    searchTimer = [NSTimer scheduledTimerWithTimeInterval:kSearchBarDelay target:self selector:@selector(performSearch:) userInfo:nil repeats:NO];
 }
+
+- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchTimer invalidate];
+    [self performSearch:nil];
+}
+
+- (void) performSearch: (NSTimer *)timer
+{
+    if ([self.searchBar.text length] == 0)
+    {
+        [self clearResults];
+    } else if (![primaryTopic isEqualToString:self.searchBar.text])
+    {
+        primaryTopic = self.searchBar.text;
+        [[WikiInterface sharedInterface] fetchPageForTopic:primaryTopic];
+    }
+}
+
+- (void) clearResults
+{
+    primaryTopic = nil;
+    tableTitles = [[NSMutableArray alloc] init];
+    [[WikiInterface sharedInterface] clearAllPreviousResults];
+    
+    // TODO: Clear table
+}
+
 
 @end

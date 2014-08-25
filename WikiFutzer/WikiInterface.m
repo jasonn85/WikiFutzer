@@ -16,7 +16,7 @@
     
     if (self != nil)
     {
-        self.allWikiPagesEverFetched = [[NSOrderedSet alloc] init];
+        [self clearAllPreviousResults];
     }
     
     return self;
@@ -124,8 +124,16 @@
     return linkTitles;
 }
 
+- (void) clearAllPreviousResults
+{
+    self.allWikiPagesEverFetched = [[NSOrderedSet alloc] init];
+}
+
 - (WikiPage *) fetchPageForTopic:(NSString *)topic
 {
+    [self clearAllPreviousResults];
+    
+    
     NSURL * url = [self fetchURLForTopic:topic];
     NSDictionary * responseDict = [self fetchJSONForRequest:url];
     WikiPage * page = [[WikiPage alloc] initWithResponseDictionary:responseDict];

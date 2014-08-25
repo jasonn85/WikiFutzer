@@ -41,6 +41,9 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4jQ-Ik-ZyO" secondAttribute="bottom" id="wNB-xP-aYK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="pVP-iq-iXk" id="t1b-gI-KpP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

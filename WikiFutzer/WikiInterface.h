@@ -18,6 +18,8 @@
 
 - (NSURL *) urlOfRandomImageInTopic:(NSString *)topic;
 
+- (void) clearAllPreviousResults;
+
 @property (nonatomic, retain) NSOrderedSet * allWikiPagesEverFetched;
 
 @end
