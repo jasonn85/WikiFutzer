@@ -31,6 +31,13 @@
     return [NSString stringWithFormat:@"%@: %@", [self class], self.title];
 }
 
++ (instancetype) wikiPageWithTitle: (NSString *)title
+{
+    WikiPage * page = [[WikiPage alloc] init];
+    page.title = title;
+    return page;
+}
+
 - (instancetype) initWithResponseDictionary: (NSDictionary *)jsonDictionary
 {
     if (jsonDictionary == nil)
@@ -39,17 +46,29 @@
         return nil;
     }
     
-    self = [super init];
+    NSDictionary * firstPage = [[jsonDictionary[@"query"][@"pages"] allValues] firstObject];
+
+    
+    if (firstPage[@"missing"] != nil)
+    {
+        NSLog(@"No results found");
+        return nil;
+    }
+    
+    self = [self init];
     
     if (self != nil)
     {
         self.rawResponse = jsonDictionary;
         
-        NSDictionary * firstPage = [[jsonDictionary[@"query"][@"pages"] allValues] firstObject];
         self.title = firstPage[@"title"];
         self.pageText = [firstPage[@"revisions"] firstObject];
         
-        [self retrieveImage];
+        __weak WikiPage * weakSelf = self;
+        
+        dispatch_async([[WikiInterface sharedInterface] imageFetchingQueue], ^{
+            [weakSelf retrieveImage];
+        });
     }
     
     return self;
@@ -65,9 +84,10 @@
         
         if ([imageData length] > 0)
         {
-            self.firstImage = [UIImage imageWithData:imageData];
-        } else {
-            self.firstImage = nil;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.randomImage = [UIImage imageWithData:imageData];
+                [[NSNotificationCenter defaultCenter] postNotificationName:kWikiPageNewImageLoaded object:self];
+            });
         }
     }
 }

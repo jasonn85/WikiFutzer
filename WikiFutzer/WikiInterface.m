@@ -9,6 +9,10 @@
 #import "WikiInterface.h"
 
 @implementation WikiInterface
+{
+    NSString * fetchingRelatedTopic;
+    dispatch_queue_t imageFetchingQueue;
+}
 
 - (id) init
 {
@@ -16,6 +20,7 @@
     
     if (self != nil)
     {
+        imageFetchingQueue = dispatch_queue_create("com.WikiInterface.imageFetching", 0);
         [self clearAllPreviousResults];
     }
     
@@ -32,6 +37,11 @@
     });
     
     return singleton;
+}
+
+- (dispatch_queue_t) imageFetchingQueue
+{
+    return imageFetchingQueue;
 }
 
 - (NSString *) wikipediaAPIURLString
@@ -126,24 +136,54 @@
 
 - (void) clearAllPreviousResults
 {
+    fetchingRelatedTopic = nil;
     self.allWikiPagesEverFetched = [[NSOrderedSet alloc] init];
 }
 
 - (WikiPage *) fetchPageForTopic:(NSString *)topic
 {
-    [self clearAllPreviousResults];
-    
-    
     NSURL * url = [self fetchURLForTopic:topic];
     NSDictionary * responseDict = [self fetchJSONForRequest:url];
     WikiPage * page = [[WikiPage alloc] initWithResponseDictionary:responseDict];
     
-    if (![self.allWikiPagesEverFetched containsObject:page])
+    if (page != nil)
     {
-        [[self mutableOrderedSetValueForKey:NSStringFromSelector(@selector(allWikiPagesEverFetched))] addObject:page];
+        void (^saveDataBlock)(void) = ^{
+            if (![self.allWikiPagesEverFetched containsObject:page])
+            {
+                [[self mutableOrderedSetValueForKey:NSStringFromSelector(@selector(allWikiPagesEverFetched))] addObject:page];
+            }
+        };
+        
+        if (![NSThread isMainThread])
+        {
+            dispatch_sync(dispatch_get_main_queue(), saveDataBlock);
+        } else {
+            saveDataBlock();
+        }
     }
     
     return page;
+}
+
+- (void) fetchAllPagesLinkedFromTopic:(NSString *)firstTopic
+{
+    fetchingRelatedTopic = firstTopic;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        NSArray * linkedTitles = [self titlesLinkedFromTopic:firstTopic];
+        
+        for (NSString * topic in linkedTitles)
+        {
+            if (![fetchingRelatedTopic isEqualToString:firstTopic])
+            {
+                // We've started searching for something else.  Escape.
+                return;
+            }
+            
+            [self fetchPageForTopic:topic];
+        }
+    });
 }
 
 - (NSURL *) urlOfRandomImageInTopic:(NSString *)topic
@@ -158,11 +198,28 @@
         return nil;
     }
     
-    NSUInteger imageIndex = arc4random() % [images count];
-    NSDictionary * imageInfo = images[imageIndex];
-    NSString * imageTitle = imageInfo[@"title"];
+    NSMutableArray * parseableImages = [images mutableCopy];
+    NSArray * parseableImageExtensions = @[@"jpg", @"jpeg", @"gif", @"png"];
+    for (NSDictionary * image in images)
+    {
+        NSString * extension = [[image[@"title"] pathExtension] lowercaseString];
+        
+        if (![parseableImageExtensions containsObject:extension])
+        {
+            [parseableImages removeObject:image];
+        }
+    }
     
-    return [self urlForImageWithTitle:imageTitle];
+    if ([parseableImages count] > 0)
+    {
+        NSUInteger imageIndex = arc4random() % [parseableImages count];
+        NSDictionary * imageInfo = parseableImages[imageIndex];
+        NSString * imageTitle = imageInfo[@"title"];
+    
+        return [self urlForImageWithTitle:imageTitle];
+    }
+    
+    return nil;
 }
 
 @end
