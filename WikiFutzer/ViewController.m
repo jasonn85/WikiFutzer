@@ -162,14 +162,7 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    WikiInterface * wiki = [WikiInterface sharedInterface];
-    
-    // Do we need to add 1 row for the topic the user has chosen that does not yet have results?
-    NSUInteger rowsToAdd = 0;
-//    NSUInteger rowsToAdd = (([primaryTopic length] > 0) && ([wiki.allWikiPagesEverFetched containsObject:[WikiPage wikiPageWithTitle:primaryTopic]])) ? 0 : 1;
-    NSUInteger count = [wiki.allWikiPagesEverFetched count] + rowsToAdd;
-    
-    return count;
+    return [[[WikiInterface sharedInterface] allWikiPagesEverFetched] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
