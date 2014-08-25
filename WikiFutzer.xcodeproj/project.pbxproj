@@ -21,6 +21,8 @@
 		967F2E8219AAE0A600E39334 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967F2E6419AAE0A600E39334 /* UIKit.framework */; };
 		967F2E8A19AAE0A600E39334 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 967F2E8819AAE0A600E39334 /* InfoPlist.strings */; };
 		967F2E8C19AAE0A600E39334 /* WikiFutzerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 967F2E8B19AAE0A600E39334 /* WikiFutzerTests.m */; };
+		967F2E9719AB09DE00E39334 /* WikiInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 967F2E9619AB09DE00E39334 /* WikiInterface.m */; };
+		967F2E9A19AB0A3300E39334 /* WikiPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 967F2E9919AB0A3300E39334 /* WikiPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		967F2E8719AAE0A600E39334 /* WikiFutzerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WikiFutzerTests-Info.plist"; sourceTree = "<group>"; };
 		967F2E8919AAE0A600E39334 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		967F2E8B19AAE0A600E39334 /* WikiFutzerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WikiFutzerTests.m; sourceTree = "<group>"; };
+		967F2E9519AB09DE00E39334 /* WikiInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiInterface.h; sourceTree = "<group>"; };
+		967F2E9619AB09DE00E39334 /* WikiInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiInterface.m; sourceTree = "<group>"; };
+		967F2E9819AB0A3300E39334 /* WikiPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiPage.h; sourceTree = "<group>"; };
+		967F2E9919AB0A3300E39334 /* WikiPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiPage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,10 @@
 				967F2E7219AAE0A600E39334 /* Main.storyboard */,
 				967F2E7519AAE0A600E39334 /* ViewController.h */,
 				967F2E7619AAE0A600E39334 /* ViewController.m */,
+				967F2E9519AB09DE00E39334 /* WikiInterface.h */,
+				967F2E9619AB09DE00E39334 /* WikiInterface.m */,
+				967F2E9819AB0A3300E39334 /* WikiPage.h */,
+				967F2E9919AB0A3300E39334 /* WikiPage.m */,
 				967F2E7819AAE0A600E39334 /* Images.xcassets */,
 				967F2E6719AAE0A600E39334 /* Supporting Files */,
 			);
@@ -249,8 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				967F2E7719AAE0A600E39334 /* ViewController.m in Sources */,
+				967F2E9A19AB0A3300E39334 /* WikiPage.m in Sources */,
 				967F2E7119AAE0A600E39334 /* AppDelegate.m in Sources */,
 				967F2E6D19AAE0A600E39334 /* main.m in Sources */,
+				967F2E9719AB09DE00E39334 /* WikiInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WikiInterface.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [[WikiInterface sharedInterface] fetchPageForTopic:@"Albert Einstein"];
 }
 
 - (void)didReceiveMemoryWarning
