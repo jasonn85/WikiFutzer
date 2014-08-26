@@ -1,6 +1,8 @@
 WikiFutzer
-Written for the Las Vegas iOS Developers Meetup group in August 2014.
 ==========
+
+Written for the Las Vegas iOS Developers Meetup group in August 2014.
+
 
 An iOS GCD/Table demo that uses Wikipedia for a source of data.  Entering an article will list that article and every article linked from the original, along with a thumbnail of a random image from each page.
 
