@@ -2,6 +2,7 @@
 //  WikiInterface.m
 //  WikiFutzer
 //
+//  A quick and dirty wrapper around a few Wikipedia web API calls.  This does very little error handling and struggles with things like typos in search text.
 //  Created by Jason Neel on 8/24/14.
 //
 //

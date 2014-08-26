@@ -51,10 +51,12 @@
     
     tableTitles = [[NSMutableArray alloc] init];
     
+    // Add a gesture recognizer used to dismiss the keyboard when touching away from the search bar.
     tapper = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
     tapper.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapper];
     
+    // Add an action to the table's pan gesture recognizer to do the same as above.
     [self.tableView.panGestureRecognizer addTarget:self action:@selector(tapped:)];
 }
 
@@ -68,6 +70,7 @@
 {
     CGPoint location = [recognizer locationInView:self.view];
     
+    // If the user touched anywhere outside of the search bar, dismiss the keyboard.
     if (!CGRectContainsPoint(self.searchBar.frame, location))
     {
         [self.searchBar resignFirstResponder];

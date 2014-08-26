@@ -11,26 +11,7 @@
 
 @implementation WikiPage
 
-- (BOOL) isEqual:(WikiPage *)object
-{
-    if ([object isKindOfClass:[WikiPage class]])
-    {
-        return ([self.title isEqualToString:object.title]);
-    }
-    
-    return NO;
-}
-
-- (NSUInteger) hash
-{
-    return [self.title hash];
-}
-
-- (NSString *) description
-{
-    return [NSString stringWithFormat:@"%@: %@", [self class], self.title];
-}
-
+#pragma mark - Constructors
 + (instancetype) wikiPageWithTitle: (NSString *)title
 {
     WikiPage * page = [[WikiPage alloc] init];
@@ -47,7 +28,7 @@
     }
     
     NSDictionary * firstPage = [[jsonDictionary[@"query"][@"pages"] allValues] firstObject];
-
+    
     
     if (firstPage[@"missing"] != nil)
     {
@@ -74,6 +55,28 @@
     return self;
 }
 
+#pragma mark - NSObject overrides
+- (BOOL) isEqual:(WikiPage *)object
+{
+    if ([object isKindOfClass:[WikiPage class]])
+    {
+        return ([self.title isEqualToString:object.title]);
+    }
+    
+    return NO;
+}
+
+- (NSUInteger) hash
+{
+    return [self.title hash];
+}
+
+- (NSString *) description
+{
+    return [NSString stringWithFormat:@"%@: %@", [self class], self.title];
+}
+
+#pragma mark - Image retrieval
 - (void) retrieveImage
 {
     NSURL * imageUrl = [[WikiInterface sharedInterface] urlOfRandomImageInTopic:self.title];
