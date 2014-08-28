@@ -68,12 +68,15 @@
 
 - (void) tapped: (UITapGestureRecognizer *)recognizer
 {
-    CGPoint location = [recognizer locationInView:self.view];
-    
-    // If the user touched anywhere outside of the search bar, dismiss the keyboard.
-    if (!CGRectContainsPoint(self.searchBar.frame, location))
+    if (recognizer.state == UIGestureRecognizerStateBegan)
     {
-        [self.searchBar resignFirstResponder];
+        CGPoint location = [recognizer locationInView:self.view];
+        
+        // If the user touched anywhere outside of the search bar, dismiss the keyboard.
+        if (!CGRectContainsPoint(self.searchBar.frame, location))
+        {
+            [self.searchBar resignFirstResponder];
+        }
     }
 }
 
