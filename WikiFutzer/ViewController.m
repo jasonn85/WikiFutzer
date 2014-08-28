@@ -106,8 +106,7 @@
             }];
             
             [self.tableView endUpdates];
-        } else if (changeKind == NSKeyValueChangeSetting
-                   )
+        } else if (changeKind == NSKeyValueChangeSetting)
         {
             [self.tableView reloadData];
         } else {
